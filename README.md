@@ -1,3 +1,5 @@
+ICR RSE Group have forked this to prepare some changes to the code specific to the ICR for plot outputs.
+
 # MuTrans (The MUltiscale method for TRANSient cells )
 
 **Dissecting Transition Cells from Single-cell Transcriptome through Multi-Scale Stochastic Dynamics**
