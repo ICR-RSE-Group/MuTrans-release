@@ -1,0 +1,13 @@
+.venv/*
+venv/*
+.venv/*
+Example/__pycache__/*
+
+_ra01.ipynb
+Dockerfile
+requirements.txt
+Example/*
+!Example/_test_changes.py
+.vscode/launch.json
+Example/example_haem_development_15K.ipynb
+.ipynb_checkpoints/_ra01-checkpoint.ipynb

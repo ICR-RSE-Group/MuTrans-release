@@ -238,6 +238,12 @@ if(par.plot_landscape)
     axis off
     tickCell = {'XTickLabel',{},'YTickLabel',{},'ZTickLabel',{}};
     set(gca,tickCell{:});
+    if isfield(par,'fig_title')
+        title(par.fig_title);
+    end
+    if isfield(par,'fig_name')
+        savefig(par.fig_name)
+    end
 end
 %% output
 out.trans_coord = score_aver;

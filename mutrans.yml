@@ -1,0 +1,16 @@
+name: mutrans
+channels:
+  - conda-forge
+  - anaconda
+  - bioconda
+dependencies:
+  - python>=3.7,<3.9
+  - pandas
+  - pyemma
+  - numpy
+  - scanpy
+  - matplotlib
+  - hdf5plugin
+  - seaborn
+  - ipykernel
+  - setuptools<66.0.0
