@@ -93,6 +93,10 @@ if ~isfield(par,'reduce_large_scale')
     par.reduce_large_scale = false;
 end
 
+if ~isfield(par,'fig_title')
+    par.fig_title = '';
+end
+
 colors = par.colors;
 label = par.label;
 level = unique(par.plot_label);
@@ -173,6 +177,10 @@ if(par.plot_landscape)
     figure;
     gscatter(score_aver_x,score_aver_y,label,colors,[],mksize);
     set(gca,'xtick',[],'ytick',[]);
+    if isfield(par,'fig_name')
+        title(par.fig_title);
+        savefig(strcat(par.fig_name,'_2d','.fig'));
+    end
     
     figure;
     [X1Grid,X2Grid] = meshgrid(x,y);
@@ -238,12 +246,10 @@ if(par.plot_landscape)
     axis off
     tickCell = {'XTickLabel',{},'YTickLabel',{},'ZTickLabel',{}};
     set(gca,tickCell{:});
-    if isfield(par,'fig_title')
-        title(par.fig_title);
-    end
     if isfield(par,'fig_name')
-        savefig(par.fig_name)
-    end
+        title(par.fig_title);
+        savefig(strcat(par.fig_name,'_3d','.fig'));
+    end  
 end
 %% output
 out.trans_coord = score_aver;
